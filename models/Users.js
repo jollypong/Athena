@@ -43,7 +43,6 @@ Users.init(
                 const salt = bcrypt.genSaltSync();
                 newUserData.password = bcrypt.hashSync(newUserData.password, 10);
             },
-
         },
         sequelize,
         timestamps: false,
