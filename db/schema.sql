@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS `chatbot`;
+DROP DATABASE IF EXISTS gaggle_db;
 
-CREATE DATABASE `chatbot`;
+CREATE DATABASE gaggle_db;
