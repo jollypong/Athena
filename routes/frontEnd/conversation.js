@@ -2,10 +2,10 @@ const router = require('express').Router();
 const { render } = require('express/lib/response');
 const { User, Post, Comment } = require('../../models');
 
-//homepage
+//conversation
 router.get('/', async (req, res) => {
     try {
-        res.render('homepage', {
+        res.render('conversation', {
             userId: req.session.userId,
         });
     } catch (err) {
