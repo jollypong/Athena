@@ -41,6 +41,9 @@ router.post('/', async (req, res) => {
             user_id: req.session.user_id, //TRAVIS HELP!
         }); 
         res.status(200).json(newConversation);
+    }catch(err) {
+        res.status(400).json(err);
     }
-    })
-})
+});
+
+//delete conversation
