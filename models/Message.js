@@ -13,25 +13,20 @@ Message.init(
             autoIncrement: true
         },
         body: {
-            type: DataTypes.STRING, 
+            type: DataTypes.STRING,
             allowNull: false
-        }, 
+        },
         user_id: {
-            type: DataTypes.STRING, 
-            allowNull: false, 
+            type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
                 model: 'user',
                 key: 'id'
             }
         },
-        conversation_id: {
-            type: DataTypes.STRING, 
-            allowNull: false, 
-            references: {
-                model: 'conversation',
-                key: 'id'
-            }
-        },
+
+    },
+    {
         sequelize,
         timestamps: false,
         freezeTableName: true,
