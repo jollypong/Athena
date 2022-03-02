@@ -30,21 +30,22 @@
         </div>
         {{!-- right side --}}
         <div class="navbar-nav ml-auto">
-            {{#unless session.user}}
+            {{#if userId}}
+            <li class="nav-item">
+                <a id='logout' class="nav-link" href="">Logout</a>
+            </li>
+            {{else}}
             <li class="nav-item">
                 <a class="nav-link" href="/login">Login</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/register">Register</a>
             </li>
-            {{else}}
-            <li class="nav-item">
-                <a class="nav-link" href="/logout">Logout</a>
-            </li>
-            {{/unless}}
+            {{/if}}
     </nav>
     {{{body}}}
 
 </body>
+<script src="./js/main.js"></script>
 
 </html>
