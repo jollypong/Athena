@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS 'gaggle_db';
+DROP DATABASE IF EXISTS gaggle_db;
 
-CREATE DATABASE `gaggle_db`;
+CREATE DATABASE gaggle_db;
