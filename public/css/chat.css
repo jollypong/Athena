@@ -1,0 +1,151 @@
+
+.chat1{ 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh; 
+    background-color: rgb(173, 173, 177);
+}
+/* #endregion */
+/* #region chat box style */
+#Container2 { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    width: 50%; 
+}
+
+#chatBox{ 
+    width: 100%;
+    height: 95vh; 
+    overflow: hidden; 
+     
+    position: relative; 
+    margin: 5px; 
+    display:flex;
+    flex-direction: column;
+}
+
+
+
+
+#gaggleInfo{ 
+    color: white;
+    padding: 19px; 
+}
+
+#gaggleInfo { 
+    width: 50px; 
+    color: white;
+    font-weight: bold; 
+    font-size: 0.8em; 
+    padding-left: 6px; 
+    background-color: white;
+    border-radius: 50px; 
+    margin-left: -3px; 
+    margin-top: 3px;
+}
+
+#searchButton {
+    border-radius : 0 20px 20px 0;
+}
+
+#input {
+    height: 30px;
+    border-radius: 20px 0 0 20px;
+    text-indent: 20px; 
+}
+
+#message-container{ 
+
+    overflow-y: auto;
+    background-color: var(--light);
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.gaggleChatContent{ 
+    width: 60%; 
+    word-wrap: break-word; 
+    background-color: var(--salmon);
+    padding: 7px 10px; 
+    border-radius: 10px 10px 10px 0;
+    margin: 5px 0;
+}
+
+.userChatContent{ 
+    width: 60%;
+    word-wrap: break-word; 
+    background-color: grey;
+    padding: 7px 10px; 
+    border-radius: 10px 10px 0 10px; 
+    margin: 5px 0 5px auto; 
+}
+
+.form-container {
+    display:flex;
+    background-color: white;
+    padding: 15px; 
+    align-items:center;
+    justify-content: space-evenly;
+    color: black;
+}
+/* #endregion */
+/* #region Chat input for messages */
+#chatInputContainer{ 
+    display: flex; 
+    align-items: center; 
+    width: 90%;
+    height: 100%; 
+    overflow: hidden; 
+    position: relative; 
+    bottom: 0; 
+    color: black;
+}
+
+#chatInputContainer input{ 
+    width: 100%;
+    height: 100%; 
+    background-color: white;
+  
+    color: black;
+    font-size: 1.2em; 
+    margin: 5px;
+    text-indent: 20px; 
+}
+
+#chatBtn{ 
+    width: 100px;
+    
+    background-color: rgb(103, 209, 103);
+    padding: 10px; 
+    margin-left: 10px; 
+}
+
+#sendButton { 
+    width: 30px;
+    height: 30px; 
+    background-color: transparent;
+    position: relative; 
+    cursor: pointer; 
+    transition: 0.4s ease-in-out; 
+}
+#clearButton{ 
+    border-radius: 50px;  
+    width: 80px;  
+    height: 20px;
+    padding: 23px; 
+    float: right;
+    margin-right: 10px; 
+}
+
+
+
+
+.modal-card, 
+.modal-content{ 
+    margin: 0 20px; 
+}
+
+
