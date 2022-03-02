@@ -20,6 +20,8 @@ Message.belongsTo(Conversation, {
     foreignKey: 'Conversation_id'
 });
 
+//messages should also contain many users...? 
+
 //user has many Messages
 User.hasMany(Message, {
     foreignKey: 'user_id'
@@ -33,8 +35,4 @@ module.exports = {
     User,
     Conversation,
     Message
-};
-
-module.exports = {
-    User
 };

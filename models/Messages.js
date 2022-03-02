@@ -15,7 +15,15 @@ Messages.init(
         body: {
             type: DataTypes.STRING, 
             allowNull: false
-        }
+        }, 
+        user_id: {
+            type: DataTypes.STRING, 
+            allowNull: false, 
+            references: {
+                model: 'user',
+                key: 'id'
+            }
+        },
     }
 )
 
