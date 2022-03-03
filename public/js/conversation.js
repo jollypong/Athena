@@ -19,5 +19,5 @@ async function newFormHandler(event) {
   }
 }
 
-document.querySelector('.chatInputContainer').addEventListener('submit', newFormHandler);
+document.querySelector('#chatInputContainer').addEventListener('submit', newFormHandler);
   
