@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const Message = require('../../models/Message');
 
+
+
 // router.get('/:id', async (req, res) => {
 //     try{
 //         const getMessage = await Message.findByPk(req.params.id, {
@@ -14,7 +16,6 @@ const Message = require('../../models/Message');
 //     };
 // });
 
-//WHY isn't the Message require being recognized here? and also the request? 
 router.get('/:id', async (req, res) => {
     try {
         const messageDbData = await Message.findByPk(req.params.id, {
