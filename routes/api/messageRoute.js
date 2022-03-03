@@ -1,7 +1,35 @@
 const router = require('express').Router();
 const Message = require('../../models/Message');
 
-module.exports = router;
+// router.get('/:id', async (req, res) => {
+//     try{
+//         const getMessage = await Message.findByPk(req.params.id, {
+//             include: [
+//                 Message
+//             ]
+//         });
+//         res.status(200).json(getMessage); 
+//     }catch (err){
+//         res.status(500).json(err); 
+//     };
+// });
+
+//WHY isn't the Message require being recognized here? and also the request? 
+router.get('/:id', async (req, res)=> {
+    try {
+        const messageDbData = await Message.findByPk(req.params.id, {
+            attributes: ['id', 'title']
+        }); 
+        const messageData = messageDbData({ plain: true}); 
+        console.log(messageData); 
+        res.render('message', {
+            messageData, 
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err)
+    };
+});
 
 router.post('/', async (req,res)=> {
     try {

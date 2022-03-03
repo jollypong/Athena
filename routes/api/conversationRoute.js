@@ -33,6 +33,22 @@ router.get('/:id', async (req, res) => {
     };
 });
 
+// router.get('/:id', async (req, res)=> {
+//     try {
+//         const conversationDbData = await Post.findByPk(req.params.id, {
+//             attributes: ['id', 'title']
+//         }); 
+//         const conversationData = conversationDbData({ plain: true}); 
+//         console.log(conversationData); 
+//         res.render('Conversation', {
+//             conversationData, 
+//             logged_in: req.session.logged_in
+//         });
+//     } catch (err) {
+//         res.status(500).json(err)
+//     };
+// });
+
 //create new conversation
 router.post('/', withAuth, async (req, res) => {
     try{
