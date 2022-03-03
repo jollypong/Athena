@@ -1,11 +1,11 @@
 async function newFormHandler(event) {
   event.preventDefault();
-  const dish_name = document.querySelector('#chatInput').value;
+  const chat_text = document.querySelector('#chatInput').value;
   
   const response = await fetch(`/api/conversation`, {
     method: 'POST',
     body: JSON.stringify({
-      dish_name,
+      chat_text,
     }),
     headers: {
       'Content-Type': 'application/json',
