@@ -5,7 +5,7 @@ const { User, Post, Comment } = require('../../models');
 //homepage
 router.get('/', async (req, res) => {
     try {
-        res.render('home', {
+        res.render('homepage', {
             userId: req.session.userId,
         });
     } catch (err) {
