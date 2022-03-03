@@ -1,8 +1,8 @@
 <div class="chat1">
     <section id="Container container2">
-      
+
         <div id="chatBox" class="card">
-           
+
             <div id="gaggle">
 
                 <div id="gaggleInfo" class="column">
@@ -11,36 +11,35 @@
                 </div>
 
             </div>
-            
-            <div id="message-container" class="card-content">
-              
-                <div id="messages">
-                      {{!-- {{chatinput}}
-      {{#each chatinput as |chat|}}
-    <div class='dish userChatContent thought'>
-      <p>
-        {{chat.chat_input}}
-      </p> --}}
 
+            <div id="message-container" class="card-content">
+
+                <div id="messages">
+                    {{#each messages as |message|}}
+                    <div class='dish userChatContent thought'>
+                        <p>
+                            {{message.body}}
+                        </p>
+
+                    </div>
+
+                    {{/each}}
                 </div>
 
+                <div id='conversation-id' data="{{conversationId}}" class="form-container">
+
+                    <form id="chatInputContainer" class="">
+
+                        <input id="chatInput" type=text placeholder="Message!" />
+                        <button id="chatBtn" class="">
+                            SEND
+                            <i id="sendButton" class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
 
             </div>
-           
-            <div class="form-container">
-
-                <form id="chatInputContainer" class="">
-
-                    <input id="chatInput" type=text placeholder="Message!" />
-                    <button id="chatBtn" class="">
-                        SEND
-                        <i id="sendButton" class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
-            </div>
-          
         </div>
+    </section>
 </div>
-</section>
-</div>
- <script src='/js/conversation.js'></script>
+<script src='/js/conversation.js'></script>
