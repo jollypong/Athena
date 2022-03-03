@@ -16,7 +16,7 @@
 }
 
 #chatBox{ 
-    width: 100%;
+    width: 50rem;
     height: 95vh; 
     overflow: hidden; 
      
@@ -39,8 +39,8 @@
     color: white;
     font-weight: bold; 
     font-size: 0.8em; 
-    padding-left: 6px; 
-    background-color: white;
+   
+   
     border-radius: 50px; 
     margin-left: -3px; 
     margin-top: 3px;
@@ -148,4 +148,58 @@
     margin: 0 20px; 
 }
 
+.thought {
+    display:flex;
+    background-color:rgb(34, 202, 138);
+    padding:20px;
+    border-radius:30px;
+    min-width:40px;
+    max-width:220px;
+    min-height:40px;
+    margin:20px;
+    position:relative;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+  .thought:before,
+  .thought:after {
+    content:"";
+    background-color:rgb(34, 202, 138);
+    border-radius:50%;
+    display:block;
+    position:absolute;
+    z-index:-1;
+  }
+  .thought:before {
+    width:44px;
+    height:44px;
+    top:-12px;
+    left:28px;
+    box-shadow:-50px 30px 0 -12px rgb(34, 202, 138);
+  }
+  .thought:after {
+    bottom:-10px;
+    right:26px;
+    width:30px;
+    height:30px;
+    box-shadow:40px -34px 0 0 rgb(34, 202, 138),
+               -28px -6px 0 -2px rgb(34, 202, 138),
+               -24px 17px 0 -6px rgb(34, 202, 138),
+               -5px 25px 0 -10px rgb(34, 202, 138);
+    
+  }
+  #chatBox {
+    width: 50rem;
+    height: 95vh;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  #Containercustom {
+    width: 90%;
+  }
 
