@@ -5,11 +5,6 @@ const { User, Message, Conversation } = require('../../models');
 //
 router.get('/:id', async (req, res) => {
     try {
-        // const messageArray = await Conversation.findByPk(req.params.id, {
-        //     include: [{
-        //         Message
-        //     }]
-        // });
         const messageArray = await Message.findAll({
             where: {
                 conversation_id: req.params.id
@@ -18,7 +13,8 @@ router.get('/:id', async (req, res) => {
         const messagesObject = messageArray.map(message => message.dataValues);
         res.render('conversation', {
             messages: messagesObject,
-            userId: req.session.userId
+            userId: req.session.userId,
+            conversationId: req.params.id
         })
     } catch (err) {
         console.log(err);

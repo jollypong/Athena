@@ -2,7 +2,6 @@ async function newFormHandler(event) {
   event.preventDefault();
   const body = document.querySelector('#chatInput').value;
   const conversationId = document.getElementById('conversation-id').getAttribute('data');
-  console.log(body);
   const response = await fetch(`/api/message`, {
     method: 'POST',
     body: JSON.stringify({
@@ -15,10 +14,10 @@ async function newFormHandler(event) {
   });
 
   if (response.ok) {
-    //document.location.replace('/conversation');
+    document.location.replace('/conversation/' + conversationId);
   } else {
     alert('Failed to send message');
-    console.log(response);
+    console.log(body + ' ' + conversationId);
   }
 }
 
