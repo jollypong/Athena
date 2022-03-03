@@ -5,7 +5,7 @@ const User = require('../../models/User');
 
 //api/users/
 
-//all users
+//all user
 router.get('/', async (req, res) => {
     try {
         const users = await User.findAll();

@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
 class Conversation extends Model {} 
-// should we include user_id here as well to grab Conversations by User? 
+
 Conversation.init(
     {
         id: {
@@ -15,7 +15,6 @@ Conversation.init(
         title: {
             type: DataTypes.STRING, 
             allowNull: false, 
-            defaultValue: null
         },
         date: {
             type: DataTypes.DATE, 
@@ -27,6 +26,15 @@ Conversation.init(
             allowNull: false, 
             defaultValue: NOW,
         },
+        user_id: {
+            type: DataTypes.INTEGER, 
+            references: {
+                model: 'user', 
+                key: 'id'
+            }
+        }
+    },
+    {
         sequelize,
         timestamps: false,
         freezeTableName: true,

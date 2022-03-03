@@ -17,7 +17,7 @@ Message.init(
             allowNull: false
         }, 
         user_id: {
-            type: DataTypes.STRING, 
+            type: DataTypes.INTEGER, 
             allowNull: false, 
             references: {
                 model: 'user',
@@ -25,17 +25,19 @@ Message.init(
             }
         },
         conversation_id: {
-            type: DataTypes.STRING, 
+            type: DataTypes.INTEGER, 
             allowNull: false, 
             references: {
                 model: 'conversation',
-                key: 'id'
+                key: 'id',
             }
         },
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        modelName: 'message'
+    },
+    {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    modelName: 'message'
     }
 );
 

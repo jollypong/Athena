@@ -13,16 +13,18 @@ Conversation.belongsTo(User, {
 
 //Conversations has many Messages
 Conversation.hasMany(Message, {
-    foreignKey: 'Conversation_id'
+    foreignKey: 'conversation_id', 
+    onDelete: 'CASCADE'
 });
 
 Message.belongsTo(Conversation, {
-    foreignKey: 'Conversation_id'
+    foreignKey: 'conversation_id'
 });
 
 //user has many Messages
 User.hasMany(Message, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 });
 
 Message.belongsTo(User, {
