@@ -1,22 +1,23 @@
 async function newFormHandler(event) {
-    event.preventDefault();
-    const chat_input= document.querySelector('#chatinput').value;
-   
-    const response = await fetch(`/api/dish`, {
-      method: 'POST',
-      body: JSON.stringify({
-        chat_input,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    if (response.ok) {
-      document.location.replace('/');
-    } else {
-      alert('Failed to add dish');
-    }
-  }
+  event.preventDefault();
+  const dish_name = document.querySelector('#chatInput').value;
   
-  document.querySelector('.new-dish-form').addEventListener('submit', newFormHandler);
-   
+  const response = await fetch(`/api/conversation`, {
+    method: 'POST',
+    body: JSON.stringify({
+      dish_name,
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+ 
+  if (response.ok) {
+    document.location.replace('/conversation');
+  } else {
+    alert('Failed to send message');
+  }
+}
+
+document.querySelector('.chatInputContainer').addEventListener('submit', newFormHandler);
+  
