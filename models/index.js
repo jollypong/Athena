@@ -2,18 +2,9 @@ const User = require('./User');
 const Conversation = require('./Conversation');
 const Message = require('./Message');
 
-//user has many conversations
-User.hasMany(Conversation, {
-    foreignKey: 'user_id'
-});
-
-Conversation.belongsTo(User, {
-    foreignKey: 'user_id'
-});
-
 //Conversations has many Messages
 Conversation.hasMany(Message, {
-    foreignKey: 'conversation_id', 
+    foreignKey: 'conversation_id',
     onDelete: 'CASCADE'
 });
 

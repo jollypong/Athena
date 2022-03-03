@@ -1,13 +1,25 @@
 const router = require('express').Router();
 const { render } = require('express/lib/response');
-const { User, Post, Comment } = require('../../models');
+const { User, Message, Conversation } = require('../../models');
 
-//conversation
-router.get('/', async (req, res) => {
+//
+router.get('/:id', async (req, res) => {
     try {
-        res.render('conversation', {
-            userId: req.session.userId,
+        // const messageArray = await Conversation.findByPk(req.params.id, {
+        //     include: [{
+        //         Message
+        //     }]
+        // });
+        const messageArray = await Message.findAll({
+            where: {
+                conversation_id: req.params.id
+            }
         });
+        const messagesObject = messageArray.map(message => message.dataValues);
+        res.render('conversation', {
+            messages: messagesObject,
+            userId: req.session.userId
+        })
     } catch (err) {
         console.log(err);
     }
