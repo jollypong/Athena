@@ -1,8 +1,8 @@
 <div class="chat1">
     <section id="Container container2">
-        <!-- chatbox -->
+      
         <div id="chatBox" class="card">
-            <!-- #region Salbot profile up top of chatbox-->
+           
             <div id="gaggle">
 
                 <div id="gaggleInfo" class="column">
@@ -11,17 +11,22 @@
                 </div>
 
             </div>
-            <!-- #region Main chat section-->
+            
             <div id="message-container" class="card-content">
-                <!-- Empty Div for messages -->
+              
                 <div id="messages">
+                      {{!-- {{chatinput}}
+      {{#each chatinput as |chat|}}
+    <div class='dish userChatContent thought'>
+      <p>
+        {{chat.chat_input}}
+      </p> --}}
 
                 </div>
 
 
             </div>
-            <!-- #endregion -->
-            <!-- #region input field section-->
+           
             <div class="form-container">
 
                 <form id="chatInputContainer" class="">
@@ -33,23 +38,9 @@
                     </button>
                 </form>
             </div>
-            <!-- #endregion -->
+          
         </div>
 </div>
 </section>
 </div>
-<!-- #region Modal for Wikipedia API -->
-<div class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-
-        <section class="modal-card-body">
-            <div class="content" id="output">
-                <!-- wiki results -->
-                <div>
-        </section>
-        <footer class="modal-card-foot">
-            <button class="button is-danger" id="closeBtn">Close</button>
-        </footer>
-    </div>
-</div>
+ <script src='/js/conversation.js'></script>
