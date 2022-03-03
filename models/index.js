@@ -2,7 +2,7 @@ const User = require('./User');
 const Conversation = require('./Conversation');
 const Message = require('./Message');
 
-//user has many posts
+//user has many conversations
 User.hasMany(Conversation, {
     foreignKey: 'user_id'
 });

@@ -10,19 +10,19 @@ Conversation.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
-        }, 
+        },
         title: {
             type: DataTypes.STRING, 
             allowNull: false, 
         },
         date: {
-            type: DataTypes.DATE, 
-            allowNull: false, 
+            type: DataTypes.DATE,
+            allowNull: false,
             defaultValue: NOW
-        }, 
+        },
         time: {
-            type: DataTypes.TIME, 
-            allowNull: false, 
+            type: DataTypes.TIME,
+            allowNull: false,
             defaultValue: NOW,
         },
         user_id: {
