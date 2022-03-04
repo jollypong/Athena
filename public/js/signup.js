@@ -8,7 +8,7 @@ submit.addEventListener('click', async (event) => {
         let username = document.getElementById('username').value.trim();
         let password = document.getElementById('password').value.trim();
         let email = document.getElementById('email').value.trim();
-        
+
         //validator
         if (!username || !password || !email) {
             alert('Please make sure all fields are filled')
@@ -16,7 +16,7 @@ submit.addEventListener('click', async (event) => {
         };
 
         //sign-up
-        const data = await fetch('/api/users/signup', {
+        const data = await fetch('/api/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -27,7 +27,7 @@ submit.addEventListener('click', async (event) => {
                 email: email
             })
         });
-        
+
         if (data.status === 201) {
             window.location.href = '/login';
             alert('Login Sucessful');
