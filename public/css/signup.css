@@ -84,7 +84,7 @@ h1{
 	font-size: 16px;
 	
 }
-.loginbox a{
+.loginbox input[type="submit"]{
 	border: none;
 	outline: none;
 	height: 40px;
@@ -93,7 +93,7 @@ h1{
 	font-size: 18px;
 	border-radius: 20px;
 }
-.loginbox a:hover{
+.loginbox input[type="submit"]:hover{
 	cursor:pointer;
 	background: #ffc107;
 	color: #000;
@@ -109,7 +109,7 @@ h1{
 	color: #ffc107
 }
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:300px){
     body{
         margin: 0;
         padding: 0;
