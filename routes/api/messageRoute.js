@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const Message = require('../../models/Message');
 
+
+
 // router.get('/:id', async (req, res) => {
 //     try{
 //         const getMessage = await Message.findByPk(req.params.id, {
@@ -14,11 +16,10 @@ const Message = require('../../models/Message');
 //     };
 // });
 
-//WHY isn't the Message require being recognized here? and also the request? 
 router.get('/:id', async (req, res) => {
     try {
         const messageDbData = await Message.findByPk(req.params.id, {
-            attributes: ['id', 'title']
+            attributes: ['id', 'body']
         });
         const messageData = messageDbData({ plain: true });
         console.log(messageData);
@@ -31,22 +32,34 @@ router.get('/:id', async (req, res) => {
     };
 });
 
+//get all messages 
+router.get('/', async (req, res) => {
+    try {
+        const getAllMessages = await Message.findAll({
+            include: [
+                Message
+            ]
+        });
+        res.status(200).json(getAllMessages);
+    } catch (err) {
+        res.status(500).json(err)
+    };
+});
+
+
 router.post('/', async (req, res) => {
     try {
-        const user_id = req.session.userId;;
-        const { conversation_id, body } = req.body;
-
-        if (!user_id || !conversation_id || !body) {
-            res.json({ message: "Missing parameters" })
-        }
         const newMessage = await Message.create({
-            user_id,
-            conversation_id,
-            body,
+            user_id: req.session.userId,
+            conversation_id: req.body.conversation_id,
+            body: req.body.body
         });
         res.status(200).json(newMessage)
     } catch (err) {
         res.status(500).json(err)
+        console.log(err);
+        console.log('====================');
+        console.log(newMessage)
     };
 });
 
