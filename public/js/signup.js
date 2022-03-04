@@ -29,9 +29,10 @@ submit.addEventListener('click', async (event) => {
         });
         
         if (data.status === 201) {
-            window.location.href = '/';
+            window.location.href = '/login';
+            alert('Login Sucessful');
         } else {
-            alert(data.message);
+            console.log(data);
         };
     } catch (err) {
         console.log(err);
