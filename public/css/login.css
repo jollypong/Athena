@@ -99,17 +99,27 @@ h1{
 	color: #000;
 	
 }
-.loginbox a {
-	text-decoration:none;
-	font-size:12px;
-	line-height:20px;
-	color:darkgrey;
+.loginbox a{
+	float: left;
+	padding: 8px 85px;
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #fb2525;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 40px;
+	
 }
 .loginbox a:hover{
-	color: #ffc107
+	cursor:pointer;
+	background: #ffc107;
+	color: #000;
+	
 }
 
-@media only screen and (max-width:700px){
+
+@media only screen and (max-width:300px){
     body{
         margin: 0;
         padding: 0;
