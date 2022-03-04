@@ -7,7 +7,6 @@ router.get('/', async (req, res) => {
     try {
         const conversationArray = await Conversation.findAll();
         const conversationObject = conversationArray.map(conversation => conversation.get({ plain: true }));
-        console.log(conversationObject);
 
         res.render('homepage', {
             userId: req.session.userId,
