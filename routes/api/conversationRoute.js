@@ -53,7 +53,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
     try {
         const newConversation = await Conversation.create({
-            ...req.body,
+            body:req.body,
             user_id: req.session.userId,
         });
         res.status(200).json(newConversation);
