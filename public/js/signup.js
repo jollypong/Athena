@@ -1,37 +1,39 @@
-let signUpButton = document.getElementById('sign-up');
+//sign up page required! 
+let submit = document.getElementById('sign-up');
 
 submit.addEventListener('click', async (event) => {
     event.preventDefault();
     try {
-        let username = document.getElementById('username').value;
-        let password = document.getElementById('password').value;
-        let email = document.getElementById('email').value;
+        //form handle?
+        let username = document.getElementById('username').value.trim();
+        let password = document.getElementById('password').value.trim();
+        let email = document.getElementById('email').value.trim();
+        
+        //validator
+        if (!username || !password || !email) {
+            alert('Please make sure all fields are filled')
+            return;
+        };
 
-        
-            //signup
-        
-            const data=await  fetch('/api/users', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    username: username,
-                    password: password,
-                    email: email
-                })
+        //sign-up
+        const data = await fetch('/api/users/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: username,
+                password: password,
+                email: email
             })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.status === 201) {
-                        window.location.href = '/';
-                    } else {
-                        console.log(data);
-                    }
-                }
-                );
-        }
-     catch (err) {
+        });
+        
+        if (data.status === 201) {
+            window.location.href = '/';
+        } else {
+            alert(data.message);
+        };
+    } catch (err) {
         console.log(err);
-    }
+    };
 });

@@ -1,7 +1,7 @@
 const { Model, DataTypes, NOW } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Conversation extends Model {} 
+class Conversation extends Model { }
 
 Conversation.init(
     {
@@ -12,8 +12,8 @@ Conversation.init(
             autoIncrement: true
         },
         title: {
-            type: DataTypes.STRING, 
-            allowNull: false, 
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         date: {
             type: DataTypes.DATE,
@@ -24,13 +24,6 @@ Conversation.init(
             type: DataTypes.TIME,
             allowNull: false,
             defaultValue: NOW,
-        },
-        user_id: {
-            type: DataTypes.INTEGER, 
-            references: {
-                model: 'user', 
-                key: 'id'
-            }
         }
     },
     {

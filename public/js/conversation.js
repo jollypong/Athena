@@ -1,23 +1,24 @@
 async function newFormHandler(event) {
   event.preventDefault();
-  const chat_text = document.querySelector('#chatInput').value;
-  
-  const response = await fetch(`/api/conversation`, {
+  const body = document.querySelector('#chatInput').value;
+  const conversationId = document.getElementById('conversation-id').getAttribute('data');
+  const response = await fetch(`/api/message`, {
     method: 'POST',
     body: JSON.stringify({
-      chat_text,
+      body: body,
+      conversation_id: conversationId,
     }),
     headers: {
       'Content-Type': 'application/json',
     },
   });
- 
+
   if (response.ok) {
-    document.location.replace('/conversation');
+    document.location.replace('/conversation/' + conversationId);
   } else {
     alert('Failed to send message');
+    console.log(body + ' ' + conversationId);
   }
 }
 
 document.querySelector('#chatInputContainer').addEventListener('submit', newFormHandler);
-  
