@@ -9,7 +9,6 @@ logoutButton.addEventListener('click', (event) => {
         }
     })
         .then(() => {
-            console.log('logged out');
-            //location.replace('/');
+            location.replace('/');
         });
 });
