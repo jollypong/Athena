@@ -111,9 +111,6 @@ nav a:hover {
   background-color: var(--dark);
 }
 
-#conversation-section {
-  height: 100%
-}
 
 .gallery {
   flex: auto;
