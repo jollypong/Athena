@@ -9,6 +9,12 @@
   --border-radius: 0.3rem;
 }
 
+#flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 #add-dish-container {
   margin-left: 10px;
 }
@@ -103,6 +109,10 @@ nav a {
 nav a:hover {
   color: var(--secondary);
   background-color: var(--dark);
+}
+
+#conversation-section {
+  height: 100%
 }
 
 .gallery {
