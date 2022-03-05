@@ -15,10 +15,12 @@
   <nav>
     <a href="/">Home</a>
     {{#if userId}}
-    <a id="logout" href="/">Logout</a>
+    <a id="logout" class="nav-right" href="/">Logout</a>
     {{else}}
-    <a href="/login">Login</a>
-    <a href="/signup">Signup</a>
+    <div class="nav-right">
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+    </div>
     {{/if}}
   </nav>
 
