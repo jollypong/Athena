@@ -35,10 +35,14 @@ router.get('/:id', async (req, res) => {
 //get all messages 
 router.get('/', async (req, res) => {
     try {
-        const getAllMessages = await Message.findAll();
+        const getAllMessages = await Message.findAll({
+            include: [
+                Message
+            ]
+        });
         res.status(200).json(getAllMessages);
     } catch (err) {
-        res.status(500).json(err);
+        res.status(500).json(err)
     };
 });
 
