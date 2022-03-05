@@ -10,7 +10,12 @@ router.get('/:id', async (req, res) => {
                 conversation_id: req.params.id
             }
         });
-        const messagesObject = messageArray.map(message => message.dataValues);
+       
+        const messagesObject = messageArray.map(message => {message.dataValues 
+            isMessageOwner});
+
+        console.log(messagesObject)
+
         res.render('conversation', {
             messages: messagesObject,
             userId: req.session.userId,

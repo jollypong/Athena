@@ -13,23 +13,20 @@
             </div>
 
             <div id="message-container" class="card-content">
-
-                <div id="messages">
                     {{#each messages as |message|}}
+                <div id="messages" style = "float: right"></div>
                     <div class='dish userChatContent thought'>
                         <p>
-                            {{message.body}}
+                            {{message.body}}  {{message.isMessageOwner}}
                         </p>
-<div id = "usernamestamp"><sub>username{{userId}}</sub></div>
+                        <div id = "usernamestamp"><sub>{{ message.username }}</sub></div>
                     </div>
-
                     {{/each}}
                 </div>
 
+
                 <div id='conversation-id' data="{{conversationId}}" class="form-container">
-
                     <form id="chatInputContainer" class="">
-
                         <input id="chatInput" type=text placeholder="Message!" />
                         <button id="chatBtn" class="">
                             SEND
