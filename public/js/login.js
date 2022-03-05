@@ -8,8 +8,12 @@ submit.addEventListener('click', async (event) => {
         let password = document.getElementById('password').value;
 
 
-        //login
-
+        //validator
+        if(!username || !password){
+            alert('Please make sure all fields are filled')
+            return;
+        };
+         //login
         //fetch to login api
         const data = await fetch('/api/users/login', {
             method: 'POST',
