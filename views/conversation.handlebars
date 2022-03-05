@@ -13,30 +13,30 @@
             </div>
 
             <div id="message-container" class="card-content">
-                    {{#each messages as |message|}}
-                <div id="messages" style = "float: right"></div>
-                    <div class='dish userChatContent thought'>
-                        <p>
-                            {{message.body}}  {{message.isMessageOwner}}
-                        </p>
-                        <div id = "usernamestamp"><sub>{{ message.username }}</sub></div>
-                    </div>
-                    {{/each}}
+                {{#each messages as |message|}}
+                <div id="messages" style="float: right"></div>
+                <div class='dish userChatContent thought'>
+                    <p>
+                        {{message.body}} {{message.isMessageOwner}}
+                    </p>
+                    <div id="usernamestamp"><sub>{{ message.username }}</sub></div>
                 </div>
-
-
-                <div id='conversation-id' data="{{conversationId}}" class="form-container">
-                    <form id="chatInputContainer" class="">
-                        <input id="chatInput" type=text placeholder="Message!" />
-                        <button id="chatBtn" class="">
-                            SEND
-                            <i id="sendButton" class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-
+                {{/each}}
             </div>
+
+
+            <div id='conversation-id' data="{{conversationId}}" class="form-container">
+                <form id="chatInputContainer" class="">
+                    <input id="chatInput" type=text placeholder="Message!" />
+                    <button id="chatBtn" class="">
+                        SEND
+                        <i id="sendButton" class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
         </div>
-    </section>
+</div>
+</section>
 </div>
 <script src='/js/conversation.js'></script>
