@@ -13,17 +13,15 @@
   margin-left: 10px;
 }
 
-.chart {
+#myChart {
   display: inline-flex;
   flex-wrap: wrap;
-  gap: 200px;
+  gap: 100px;
   display: flex;
   padding: 20px;
   margin: 6px;
-
-  margin-right: 100px;
-
-  align-content: space-between;
+  width: 100%;
+  height: 500px;
   background-color: rgb(255, 255, 255);
   font-weight: 300px;
 }
@@ -47,12 +45,6 @@ h2 {
   background-color: rgb(218, 218, 218);
 }
 
-canvas {
-
-  width: 800px !important;
-  height: 400px !important;
-
-}
 
 a {
   color: var(--dark);
@@ -91,12 +83,14 @@ nav {
   display: flex;
   background-color: yellowgreen;
   color: white;
-  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
-#logout {
-  justify-content: right;
-  margin-left: 97rem;
+.nav-right {
+  height: fit-content;
 }
 
 nav a {
@@ -116,7 +110,7 @@ nav a:hover {
   flex-direction: column;
   background-color: #fff;
   padding: 5px;
-
+  width: 100%;
   justify-content: center;
   align-items: center;
 }

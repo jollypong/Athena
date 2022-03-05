@@ -47,7 +47,7 @@ const generateChart = async () => {
         data: {
             labels: myLabels,
             datasets: [{
-                label: 'message highscores',
+                label: 'Top Contributors',
                 data: myData,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
