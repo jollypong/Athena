@@ -32,7 +32,6 @@ submit.addEventListener('click', async (event) => {
         }
     } catch (err) {
         console.log(err)
-
     }
 })
     

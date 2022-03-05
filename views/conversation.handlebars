@@ -4,39 +4,39 @@
         <div id="chatBox" class="card">
 
             <div id="gaggle">
-
                 <div id="gaggleInfo" class="column">
                     <h2>TOPIC</h2>
+                </div>
+            </div>
 
+             <div id="message-container" class="card-content">
+
+                <div id="messages">
+                    {{#each messages as |message|}}
+                    
+                    <div class='dish userChatContent thought'>
+                        <p id = "usernamestamp">{{message.user_id}}:</p>
+                        <p>{{message.body}} {{message.isMessageOwner}}</p>
+                    </div>
+                    {{/each}}
+            </div>
+            
+
+
+                <div id='conversation-id' data="{{conversationId}}" class="form-container">
+
+                    <form id="chatInputContainer" class="">
+
+                        <input id="chatInput" type=text placeholder="Message!" />
+                        <button id="chatBtn" class="">
+                            SEND
+                            <i id="sendButton" class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
                 </div>
 
             </div>
-
-            <div id="message-container" class="card-content">
-                {{#each messages as |message|}}
-                <div id="messages" style="float: right"></div>
-                <div class='dish userChatContent thought'>
-                    <p>
-                        {{message.body}} {{message.isMessageOwner}}
-                    </p>
-                    <div id="usernamestamp"><sub>{{ message.username }}</sub></div>
-                </div>
-                {{/each}}
-            </div>
-
-
-            <div id='conversation-id' data="{{conversationId}}" class="form-container">
-                <form id="chatInputContainer" class="">
-                    <input id="chatInput" type=text placeholder="Message!" />
-                    <button id="chatBtn" class="">
-                        SEND
-                        <i id="sendButton" class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
-            </div>
-
         </div>
-</div>
-</section>
+    </section>
 </div>
 <script src='/js/conversation.js'></script>
