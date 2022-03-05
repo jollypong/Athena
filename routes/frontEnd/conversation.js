@@ -10,20 +10,22 @@ router.get('/:id', async (req, res) => {
                 id: req.params.id
             }
         });
-
         const messageArray = await Message.findAll({
             where: {
                 conversation_id: req.params.id
             }
         });
+
         const messagesObject = messageArray.map(message => message.dataValues);
+
         res.render('conversation', {
             messages: messagesObject,
             userId: req.session.userId,
             conversationId: req.params.id,
-            conversationTitle: conversationTitle.dataValues.title
+            conversationTitle: conversationTitle.dataValues.title,
 
-        })
+
+        });
     } catch (err) {
         console.log(err);
     }
