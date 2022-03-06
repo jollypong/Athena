@@ -59,17 +59,15 @@ router.post('/', async (req, res) => {
 //delete conversation
 router.delete('/:id', async (req, res) => {
     try {
-        const conversationData = await Conversation.delete({
+        const deleteConversation = await Conversation.destroy({
             where: {
-                id: req.params.id,
+                id: req.params.id
             },
         });
-        if (!conversationData) {
-            res.status(404).json({ message: 'No conversation found with this ID!' });
-            return;
-        } res.status(200).json(conversationData);
+        res.status(200).json(deleteConversation);
     } catch (err) {
         res.status(500).json(err);
+        console.log(err)
     };
 });
 
