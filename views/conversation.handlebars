@@ -1,12 +1,13 @@
-<div class="chat1">
-    <section id="Container container2">
+<div class="chat1" id="conversation-section">
+    <section id="conversation-box">
 
-        <div id="chatBox" class="card">
+        <div id="chatBox">
 
             <div id="gaggle">
 
                 <div id="gaggleInfo" class="column">
-                    <h2>TOPIC</h2>
+                    <h2>{{conversationTitle}}</h2>
+                    <button id="load-chat-button">Load Chat</button>
 
                 </div>
 
@@ -20,7 +21,7 @@
                         <p>
                             {{message.body}}
                         </p>
-<div id = "usernamestamp"><sub>username{{userId}}</sub></div>
+                        <div id="usernamestamp"><sub>username{{userId}}</sub></div>
                     </div>
 
                     {{/each}}
