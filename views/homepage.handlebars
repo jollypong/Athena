@@ -4,16 +4,16 @@
 <main>
 
   <div class="gallery">
-    <canvas id="myChart"></canvas>
+    <canvas id="myChart" height="400px" width-="500px"></canvas>
     <aside>
       <h2>Enter Discussion-Rooms</h2>
     </aside>
     {{#each conversations}}
-    <section class="card">
-      <a href="/conversation/{{id}}">
-        <header>{{title}}</header>
-      </a>
-    </section>
+      <section class="card">
+        <a href="/conversation/{{id}}">
+          <header>{{title}}</header>
+        </a>
+      </section>
     {{/each}}
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

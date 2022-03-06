@@ -1,3 +1,11 @@
+const messageContatiner = document.getElementById('message-container');
+messageContatiner.scrollTop = messageContatiner.scrollHeight;
+
+const loadChatButton = document.getElementById('load-chat-button');
+loadChatButton.addEventListener('click', () => {
+  location.reload();
+});
+
 async function newFormHandler(event) {
   event.preventDefault();
   const body = document.querySelector('#chatInput').value;

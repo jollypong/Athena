@@ -1,45 +1,51 @@
-<div class="chat1">
-    <section id="Container container2">
+<div class="chat1" id="conversation-section">
+  <section id="conversation-box">
 
-        <div id="chatBox" class="card">
+    <div id="chatBox">
 
-            <div id="gaggle">
+      <div id="gaggle">
 
-                <div id="gaggleInfo" class="column">
-                    <h2>TOPIC</h2>
+        <div id="gaggleInfo" class="column">
+          <h2>{{conversationTitle}}</h2>
+          <button id="load-chat-button">Load Chat</button>
 
-                </div>
-
-            </div>
-
-            <div id="message-container" class="card-content">
-
-                <div id="messages">
-                    {{#each messages as |message|}}
-                    <div class='dish userChatContent thought'>
-                        <p>
-                            {{message.body}}
-                        </p>
-<div id = "usernamestamp"><sub>username{{userId}}</sub></div>
-                    </div>
-
-                    {{/each}}
-                </div>
-
-                <div id='conversation-id' data="{{conversationId}}" class="form-container">
-
-                    <form id="chatInputContainer" class="">
-
-                        <input id="chatInput" type=text placeholder="Message!" />
-                        <button id="chatBtn" class="">
-                            SEND
-                            <i id="sendButton" class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-
-            </div>
         </div>
-    </section>
+
+      </div>
+
+      <div id="message-container" class="card-content">
+        <div id="messages">
+          {{logger messages}}
+          {{#each messages as |message|}}
+          {{#if isMessageOwner}}
+          <div class="userChatContent thought" style="float: right;border-radius: 10px 10px 0 10px;">
+            <p id="userNameStamp">{{message.username}}:</p>
+            <p>{{message.body}}</p>
+          </div>
+          {{else}}
+          <div class="userChatContent thought"
+            style="float: left; border-radius: 10px 10px 10px 0px; background-color:rgb(4, 206, 206)">
+            <p id="userNameStamp">{{message.username}}:</p>
+            <p>{{message.body}}</p>
+          </div>
+          {{/if}}
+          {{/each}}
+        </div>
+
+        <div id='conversation-id' data="{{conversationId}}" class="form-container">
+
+          <form id="chatInputContainer" class="">
+
+            <input id="chatInput" type=text placeholder="Message!" />
+            <button id="chatBtn" class="">
+              SEND
+              <i id="sendButton" class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
 </div>
+
 <script src='/js/conversation.js'></script>
