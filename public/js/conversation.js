@@ -24,7 +24,7 @@ async function newFormHandler(event) {
   if (response.ok) {
     document.location.replace('/conversation/' + conversationId);
   } else {
-    alert('Failed to send message');
+    alert('You must be logged in to send a message!');
     console.log(body + ' ' + conversationId);
   }
 }
