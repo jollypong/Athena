@@ -64,10 +64,11 @@ router.delete('/:id', async (req, res) => {
                 id: req.params.id,
             },
         });
+        res.status(200).json(conversationData);
         if (!conversationData) {
             res.status(404).json({ message: 'No conversation found with this ID!' });
             return;
-        } res.status(200).json(conversationData);
+        } 
     } catch (err) {
         res.status(500).json(err);
     };
