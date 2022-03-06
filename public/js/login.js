@@ -28,7 +28,7 @@ submit.addEventListener('click', async (event) => {
             if (data.status === 201) {
             window.location.href = '/';
         } else {
-            alert(data.message);
+            alert("Invalid Credentials! Check your username/password or sign-up");
         }
     } catch (err) {
         console.log(err)
