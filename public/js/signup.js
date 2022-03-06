@@ -30,7 +30,7 @@ submit.addEventListener('click', async (event) => {
 
         if (data.status === 201) {
             window.location.href = '/login';
-            alert('Login Sucessful');
+            alert('Sign Up Sucessful');
         } else {
             console.log(data);
         };
