@@ -10,6 +10,8 @@
 
 [Deployment](#deployment)
 
+[Technology Used](#technology-used)
+
 [Installation Packages](#installation)
 
 [Test](#test)
@@ -21,11 +23,21 @@
 ## Description
 ![Logo](./public/IMG/logo-transparent.png)
 
-Gaggle is a web application that enables users to have conversations with other users. After a simple sign-up process, users may engage in a gaggle(chat) with other users in one of the flock (conversations). If you have already signed-up, you may simply just log-in to be involved. 
+Gaggle is a web application that enables users to have conversations with other users. After a simple sign-up process, users may engage in a gaggle(chat) with other users in one of the flock (conversations). If you have already signed-up, you may simply just log-in and get involved. 
 
 Active users are displayed on the main page and the user with the highest contributions are marked as "Top Contributor". 
 
 Users may choose to enter a "Discussion Room" of choice and start conversations with other users. Currently, users are unable to create their own discussions, but that will be introduced with new updates in the future. Please check back for more! 
+
+## Technology Used
+Gaggle was made using: 
+- Node JS 
+- Express JS 
+- MySQL 
+- NPM Packages
+- Chart JS
+- Handlebars JS 
+- CSS 
 
 ## Deployment
 
@@ -81,7 +93,7 @@ However, please feel free to add the feature to contribute to this project or co
 ![screenshot](./public/IMG/home.png)
 ![screenshot](./public/IMG/login.png)
 ![screenshot](./public/IMG/signup.png)
-![screenshot](./public/Img/gaggle.png)
+![screenshot](./public/IMG/gaggle.png)
 
 ## Contribution
 
