@@ -1,126 +1,107 @@
-# 15 Project 2: Interactive Full-Stack Application
+# Gaggle
+![Logo](./public/IMG/logo(2).png)
+## License
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License: NPM](https://img.shields.io/badge/License-NPM-blue.svg)](https://docs.npmjs.com/policies/npm-license)
 
-Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
+## Table of Contents
 
-As your first opportunity to show employers your collaborative skills and coding abilities, this particular project will be a focal point of your portfolio. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
+[Description](#description)
 
-## Project Requirements
+[Deployment](#deployment)
 
-You and your group will use everything you’ve learned over the past six units to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+[Installation Packages](#installation)
 
-* Use Node.js and Express.js to create a RESTful API.
+[Test](#test)
 
-* Use Handlebars.js as the template engine.
+[Screenshot](#screenshot)
 
-* Use MySQL and the Sequelize ORM for the database.
+[Contributors](#contributors)
 
-* Have both GET and POST routes for retrieving and adding new data.
+## Description
+![Logo](./public/IMG/logo-transparent.png)
 
-* Use at least one new library, package, or technology that we haven’t discussed.
+Gaggle is a web application that enables users to have conversations with other users. After a simple sign-up process, users may engage in a gaggle(chat) with other users in one of the flock (conversations). If you have already signed-up, you may simply just log-in to be involved. 
 
-* Have a folder structure that meets the MVC paradigm.
+Active users are displayed on the main page and the user with the highest contributions are marked as "Top Contributor". 
 
-* Include authentication (express-session and cookies).
+Users may choose to enter a "Discussion Room" of choice and start conversations with other users. Currently, users are unable to create their own discussions, but that will be introduced with new updates in the future. Please check back for more! 
 
-* Protect API keys and sensitive information with environment variables.
+## Deployment
 
-* Be deployed using Heroku (with data).
+Website is currently deployed on Heroku. 
 
-* Have a polished UI.
+Deployed Link: [Gaggle](https://gagglechat.herokuapp.com/)
 
-* Be responsive.
+Github Repo: [Gaggle Repo](https://github.com/jollypong/Gaggle)
 
-* Be interactive (i.e., accept and respond to user input).
+## Installation
+  ** Only required if wanting to test or contribute.  
 
-* Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+  For Installation, you are required the following:
+  - Node JS 
+  - MySQL 
+  
+  Additional packages required are: 
+  - Node Packet Manager(NPM):
+    - NPM [dotenv](https://www.npmjs.com/package/dotenv)
+    - NPM [express](https://www.npmjs.com/package/express)
+    - NPM [mySQL2](https://www.npmjs.com/package/mysql2)
+    - NPM [require](https://www.npmjs.com/package/require)
+    - NPM [sequelize](https://www.npmjs.com/package/sequelize)
 
-* Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
+  You can install the above required packages by entering following on the terminal/node:
+  ```
+    npm install
+  ```
+## Test
+No testing was done for this project. 
 
-## Presentation Requirements
+However, please feel free to add the feature to contribute to this project or contact me for more details!
 
-Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
+## Future Development 
+- Refine front end design 
 
-* Elevator pitch: a one minute description of your application
+- Include Socket IO for TCP/IP connection 
 
-* Concept: What is your user story? What was your motivation for development?
+- Features to add: 
+  - include profile page and ability to assign profile images
+  - Include "make flock" (create conversation lobby)
+  - Include "gaggle timer" where it shows how long a conversation has been open for
+  - Include "destory flock" (delete conversation lobby)
+  - Include "auto-destory function" to destroy flock if hasn't been active for a period of time. 
+  - Include "gaggle gaggle" (create invite links) 
+  - Include edit/delete function to messages
+  - Support images and emojis in chat
+  - Include section displaying online users
+  - Testing
 
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+## Screenshot
 
-* Demo: Show your stuff!
+![screenshot](./public/IMG/home.png)
+![screenshot](./public/IMG/login.png)
+![screenshot](./public/IMG/signup.png)
+![screenshot](./public/Img/gaggle.png)
 
-* Directions for Future Development
+## Contribution
 
-* Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
+    Gaggle Dev 2022
 
-## Grading Requirements
+    Front End Team: 
+     - Shaleen Shaji
+     - Abi Lalu
 
-This project is graded based on the following criteria:
+    Back End Team: 
+     - Travis Anderson
+     - Joe Lee
 
-### Technical Acceptance Criteria: 25%
+    Got any questions or want to contribute to this project? 
 
-* Satisfies the following code requirements:
+Gaggle Dev 2022's Github Links: 
 
-  * Application uses a Node.js and Express.js back end and uses both GET and POST routes for retrieving and adding new data.
+  - Joe Lee [Jollypong](https//:github.com/Jollypong) 
+  - Travis Anderson [Travis-Anderson023](https://github.com/Travis-Anderson023)
+  - Shaleen Shaji [Shaleens1994](https://github.com/Shaleens1994)
+  - Abi Lalu [abilalu](https://github.com/abilalu)
 
-  * Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
-
-  * Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
-
-  * Application includes user authentication (express-session and cookies).
-
-  * Application uses at least one new library, package, or technology not covered in class.
-
-### Concept 10%
-
-* Application should be a unique and novel idea.
-
-* Your group should clearly and concisely articulate your project idea.
-
-### Deployment: 20%
-
-* Application deployed at live URL on Heroku and loads with no errors.
-
-* Application GitHub URL submitted.
-
-### Repository Quality: 10%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id-naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application is responsive.
-
-### Presentation 10%
-
-* Your group should present using Powerpoint or a similar presentation software.
-
-* Every group member should speak during the presentation.
-
-* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-### Collaboration 10%
-
-* There are no major disparities in the number of GitHub contributions between group members.
-
-## How to Submit Your Interactive Full-Stack Project
-
-**Each member of your group** is required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
----
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+## 
