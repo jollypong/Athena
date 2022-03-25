@@ -43,7 +43,7 @@ Gaggle was made using:
 
 Website is currently deployed on Heroku. 
 
-Deployed Link: [Gaggle](https://gagglechat.herokuapp.com/)
+Deployed Link: gaggle is no longer deployed here due to security reasons! Contact Joe for new deployed link!
 
 Github Repo: [Gaggle Repo](https://github.com/jollypong/Gaggle)
 
